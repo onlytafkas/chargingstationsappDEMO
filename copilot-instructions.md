@@ -2,6 +2,8 @@
 
 Before generating or modifying ANY code, you MUST read ALL instruction files listed in AGENTS.md. This is non-negotiable and must happen in every conversation turn that involves code changes.
 
+If a repo instruction requires a local setup artifact for the task, such as `backend/.env` for backend database work, treat that artifact as part of the task. Verify it exists and create it when appropriate instead of leaving the requirement as documentation only.
+
 ---
 
 # Project Context/Repo-wide

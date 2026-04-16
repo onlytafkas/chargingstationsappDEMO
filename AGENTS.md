@@ -12,6 +12,7 @@ You MUST complete ALL of the following steps BEFORE writing, editing, or generat
    - `.github/instructions/repo-structure.instructions.md`
 3. If instructions conflict or are incomplete, STOP and ask.
 4. Never assume architecture or tools not described here.
+5. If the task involves backend database setup, local backend startup, or MySQL configuration, verify whether `backend/.env` exists before making code changes. If it is required and missing, create it from `backend/.env.example` or add it with the required keys unless the user must supply unknown secret values first.
 
 Skipping step 1 or 2 is a violation of this contract. Do not proceed with code generation until all files above have been read in the current conversation turn.
 

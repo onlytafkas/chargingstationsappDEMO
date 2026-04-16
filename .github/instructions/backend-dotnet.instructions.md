@@ -25,6 +25,8 @@ applyTo: backend/**
 
 ## Configuration rules
 - For local development, MySQL connection settings MUST be stored in a gitignored `backend/.env` file.
+- For backend database setup, EF Core setup, MySQL connection work, or local backend startup that depends on database configuration, you MUST check whether `backend/.env` exists in the current workspace state.
+- If `backend/.env` is required for the task and is missing, you MUST create it using `backend/.env.example` or otherwise add the required keys before finishing the task, unless the user must first provide unknown secret values.
 - Backend startup/configuration code MUST load `backend/.env` before resolving MySQL connection settings.
 - Backend `.env` loading MUST preserve raw secret values exactly as written. Do NOT use loaders or parsing modes that interpolate `$` or otherwise rewrite passwords and connection secrets.
 - When editing `Program.cs` or any configuration/bootstrap code, preserve or add `.env` loading rather than bypassing it.
