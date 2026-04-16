@@ -4,3 +4,8 @@ GET {{backend_HostAddress}}/api/database/status
 Accept: application/json
 
 ###
+
+GET {{backend_HostAddress}}/api/sessions
+Accept: application/json
+
+###

@@ -18,6 +18,8 @@ builder.Services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =
 });
 builder.Services.AddScoped<IDatabaseStatusRepository, DatabaseStatusRepository>();
 builder.Services.AddScoped<IDatabaseStatusService, DatabaseStatusService>();
+builder.Services.AddScoped<ILoadingSessionRepository, LoadingSessionRepository>();
+builder.Services.AddScoped<ILoadingSessionService, LoadingSessionService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
