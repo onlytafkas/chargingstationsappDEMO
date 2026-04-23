@@ -9,3 +9,16 @@ GET {{backend_HostAddress}}/api/sessions
 Accept: application/json
 
 ###
+
+POST {{backend_HostAddress}}/api/sessions
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userEmail": "test@example.com",
+  "startDateTime": "2026-04-24T10:00:00",
+  "endDateTime": "2026-04-24T11:00:00",
+  "stationId": "STATION-001"
+}
+
+###

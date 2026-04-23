@@ -13,4 +13,11 @@ public sealed class LoadingSessionRepository(ApplicationDbContext dbContext) : I
             .OrderBy(session => session.StartDateTime)
             .ToListAsync(cancellationToken);
     }
+
+    public async Task<LoadingSession> CreateSessionAsync(LoadingSession session, CancellationToken cancellationToken)
+    {
+        dbContext.LoadingSessions.Add(session);
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return session;
+    }
 }

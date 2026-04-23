@@ -1,4 +1,5 @@
 import { getSessions, type LoadingSession } from "@/lib/sessions";
+import { CreateSessionModal } from "@/components/create-session-modal";
 
 const dateTimeFormatter = new Intl.DateTimeFormat("en", {
   dateStyle: "medium",
@@ -28,14 +29,17 @@ export default async function DashboardPage() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
               Dashboard
             </p>
-            <div className="space-y-2">
-              <h1 className="text-3xl font-semibold tracking-tight text-foreground">
-                Charging sessions
-              </h1>
-              <p className="max-w-2xl text-base leading-7 text-muted-foreground">
-                Review all recorded charging sessions from the existing backend
-                endpoint.
-              </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-semibold tracking-tight text-foreground">
+                  Charging sessions
+                </h1>
+                <p className="max-w-2xl text-base leading-7 text-muted-foreground">
+                  Review all recorded charging sessions from the existing backend
+                  endpoint.
+                </p>
+              </div>
+              <CreateSessionModal />
             </div>
           </div>
 
