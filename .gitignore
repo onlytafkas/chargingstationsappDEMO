@@ -11,6 +11,8 @@ Desktop.ini
 # .NET backend build output
 /backend/bin/
 /backend/obj/
+/backend.Tests/bin/
+/backend.Tests/obj/
 
 # Frontend dependencies and build output
 /frontend/node_modules/

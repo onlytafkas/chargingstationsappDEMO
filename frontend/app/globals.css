@@ -127,4 +127,7 @@
   html {
     @apply font-sans;
   }
+  .dark input[type="datetime-local"] {
+    color-scheme: dark;
+  }
 }
